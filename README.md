@@ -1,7 +1,7 @@
 
-# IP Batch Processor
+# Tool purpose
 
-This script processes batches of IP addresses and sends them as POST requests to the Radware Cloud API to resolve threat insights. The data retrieved is saved in a CSV file for further analysis. 
+This script processes batches of IP addresses and sends them as POST requests to the Radware Threat intelligence over API to resolve threat insights about IP addresses. The data retrieved is saved in a CSV file for further analysis. 
 
 ## Features
 - Reads IP addresses from a file (`ip_list.txt`).
@@ -51,17 +51,9 @@ pip install -r requirements.txt
    ```
 
 4. **Prepare your IP list:**
-   - Place a list of IP addresses in a file called `ip_list.txt`, one IP per line.
+   - Place a list of IP addresses in a file called `ip_list.txt`, one IP per line. See `ip_list_example.txt`
 
-5. **Run the script:**
-   ```bash
-   python ip_batch_processor.py
-   ```
-
-6. **Check output:**
-   - The processed data will be written to `ip_data.csv` in the root directory.
-
-7. **Set Environment Variables:**
+5. **Set Environment Variables:**
 
    - Set the API_KEY and CONTEXT environment variables using the following commands:
    ```
@@ -70,6 +62,26 @@ pip install -r requirements.txt
    ```
    You can also set these variables in your terminal session or use a tool like python-dotenv for more persistent settings.
 
+6. **Run the script:**
+   ```bash
+   python ip_query_tool.py
+   ```
+
+7. **Check output:**
+   - The processed data will be written to `ip_data.csv` in the root directory.
+
+
+## Version control
+
+V1.0 9/23/24 (Vinay)
+
+   Firtst release
+
+V1.1 9/24/24 (Egor)
+
+   - Added ip_list_example.txt
+   - Added gitignore (ignoring ip_data.xlsx, ip_list.txt and .venv directory)
+   - README.md adjustments
 
 ## Script Configuration
 
