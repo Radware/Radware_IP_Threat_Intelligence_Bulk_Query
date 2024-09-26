@@ -35,8 +35,8 @@ pip install -r requirements.txt
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/ip-batch-processor.git
-   cd ip-batch-processor
+   git clone https://github.com/Radware/Radware_IP_Threat_Intelligence_Bulk_Query.git
+   cd Radware_IP_Threat_Intelligence_Bulk_Query
    ```
 
 2. **Create a virtual environment (optional but recommended):**
@@ -56,10 +56,17 @@ pip install -r requirements.txt
 5. **Set Environment Variables:**
 
    - Set the API_KEY and CONTEXT environment variables using the following commands:
-   ```
-   $env:API_KEY='<add_input>'
-   $env:CONTEXT='<add_input>'
-   ```
+   - **Windows/Linux:**
+     ```bash
+     $env:API_KEY='<add_input>'
+     $env:CONTEXT='<add_input>'
+     ```
+
+   - **macOS:**
+     ```bash
+     export API_KEY='<add_input>'
+     export CONTEXT='<add_input>'
+     ```
    You can also set these variables in your terminal session or use a tool like python-dotenv for more persistent settings.
 
 6. **Run the script:**
@@ -82,6 +89,11 @@ V1.1 9/24/24 (Egor)
    - Added ip_list_example.txt
    - Added gitignore (ignoring ip_data.xlsx, ip_list.txt and .venv directory)
    - README.md adjustments
+
+V1.2 9/26/24 (Vinay)
+
+   - Corrected the clone respository commands with right names in README.md file only
+   - Added macOS commands to set API_KEY and CONTEXT environment variables in README.md file only.
 
 ## Script Configuration
 
